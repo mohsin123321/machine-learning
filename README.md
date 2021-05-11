@@ -21,3 +21,24 @@ Our dataset (attached in zip file __aclImdb.zip__) includes 50K reviews which ar
         print(word, file=f)   
 ```
 After building the vocabulary, we used bag of words (BOW) representation for preparing the training, testing and validation dataset in which each row of the matrix illustrates each document, and each column shows the occurrences of the word in the vocabulary corresponding to that document.
+```python
+    documents = []
+    labels = []
+    for f in os.listdir("aclImdb/train/pos"):
+        path = "aclImdb/train/pos/" + f
+        bow = read_document(path, vocabulary)
+        documents.append(bow)
+        labels.append(1)
+    for f in os.listdir("aclImdb/train/neg"):
+        path = "aclImdb/train/neg/" + f
+        bow = read_document(path, vocabulary)
+        documents.append(bow)
+        labels.append(0)
+
+    X = np.stack(documents)
+    Y = np.array(labels)
+    data = np.concatenate([X, Y[:, None]], 1)
+    np.savetxt("train.txt.gz", data)
+```    
+
+
