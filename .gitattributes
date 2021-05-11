@@ -1,2 +1,0 @@
-*.zip filter=lfs diff=lfs merge=lfs -text
-Sentiment[[:space:]]Analysis[[:space:]]with[[:space:]]Naive[[:space:]]Bayes[[:space:]]Classifier/*.zip filter=lfs diff=lfs merge=lfs -text
