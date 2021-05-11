@@ -1,13 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import numpy as np
-
-
-# In[2]:
 
 
 def train_nb(X,Y):
@@ -26,17 +17,10 @@ def train_nb(X,Y):
     return w,b
 
 
-# In[3]:
-
-
 def inference_nb(X, w, b):
     scores = X @ w + b
     labels = (scores > 0).astype(int)
     return labels,scores
-
-
-# In[4]:
-
 
 data =  np.loadtxt("train.txt.gz")
 X = data[:, :-1]
@@ -51,14 +35,6 @@ accuracy = (predictions == Y).mean()
 print("Training accuracy: ", accuracy * 100)
 
 
-# In[5]:
-
-
 np.savez("modeltrain.npz",w,b)
-
-
-# In[ ]:
-
-
 
 

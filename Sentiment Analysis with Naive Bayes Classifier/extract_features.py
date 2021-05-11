@@ -1,16 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
 
 import numpy as np 
 import os
 from aclImdb.porter import stem
-
-
-# In[2]:
-
 
 def load_vocabulary(filename):
     f = open(filename, encoding="utf8")
@@ -24,16 +15,8 @@ def load_vocabulary(filename):
     f.close()
     return voc
 
-
-# In[3]:
-
-
 PUNCT =  "!#$%&()'*+-/.,:;@?[]{}|^_`~<>=\"\\"
 TABLE = str.maketrans(PUNCT," " * len(PUNCT))
-
-
-# In[4]:
-
 
 def read_document(filename,voc):
     f = open(filename, encoding="utf8")
@@ -50,15 +33,7 @@ def read_document(filename,voc):
             bow[index] += 1
     return bow
 
-
-# In[5]:
-
-
 vocabulary = load_vocabulary("vocabulary.txt")
-
-
-# In[6]:
-
 
 documents = []
 labels = []
@@ -77,9 +52,6 @@ X = np.stack(documents)
 Y = np.array(labels)
 data = np.concatenate([X, Y[:, None]], 1)
 np.savetxt("train.txt.gz", data)
-
-
-# In[7]:
 
 
 documents = []
@@ -101,8 +73,6 @@ data = np.concatenate([X, Y[:, None]], 1)
 np.savetxt("test.txt.gz", data)
 
 
-# In[8]:
-
 
 documents = []
 labels = []
@@ -121,9 +91,6 @@ X = np.stack(documents)
 Y = np.array(labels)
 data = np.concatenate([X, Y[:, None]], 1)
 np.savetxt("validation.txt.gz", data)
-
-
-# In[ ]:
 
 
 
