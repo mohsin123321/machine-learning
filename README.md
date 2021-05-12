@@ -73,8 +73,6 @@ for tuple in np_mis_clsfd[:10]:
 	text = f.read()
 	f.close()
 	print(text)
-	print('-------------------------------------------------------------')
-
 print('Positive Missclassified reviews')
 # top 10 positive missclassified documents
 for tuple in np_mis_clsfd[-10:]:
@@ -83,5 +81,4 @@ for tuple in np_mis_clsfd[-10:]:
 	text = f.read()
 	f.close()
 	print(text)
-	print('-------------------------------------------------------------')
 ```
