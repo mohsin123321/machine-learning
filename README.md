@@ -82,3 +82,5 @@ for tuple in np_mis_clsfd[-10:]:
 	f.close()
 	print(text)
 ```
+## 2.3) Evaluating the model with different variants
+The test accuracy of the model is 80.39%, hence the model is not overfitting as the training and test accuracies are quite close. For underfitting, the accuracy is quite decent so if, even the underfitting happens it is going to be very small. We applied different techniques like stemming, removing stop words , increasing training and vocabulary size for collecting different results.So, the best model that we found for the prediction is with 5000 vocabulary size, training on large dataset without stemming (as it decreases the test accuracy of the model) and removing stop words, we got the training accuracy which is 85.60% with test accuracy equivalent to 83.42%. If we further increase the vocabulary size it makes the model to overfit the problem
