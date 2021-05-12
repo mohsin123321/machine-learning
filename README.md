@@ -99,4 +99,4 @@ for word in list(vocabulary):
         del vocabulary[word]
 ````
 
-The best model that we found for the prediction is with 5000 vocabulary size, trained on large dataset without stemming (as it decreases the test accuracy of the model) and with removed stop words, with this model we got the training accuracy which is 85.60% with test accuracy equivalent to 83.42%. If we further increase the vocabulary size it makes the model to overfit the problem.
+The best model that we found for the prediction is with 5000 vocabulary size, trained on large dataset without stemming ( as it decreases the test accuracy of the model ) and with removed stop words, with this model we got the training accuracy which is 85.60% with test accuracy equivalent to 83.42%. If we further increase the vocabulary size it makes the model to overfit the problem.
