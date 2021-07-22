@@ -19,3 +19,7 @@ The most influencial features of this problem are Class and Gender, which can be
 
 ![alt text](https://github.com/mohsin123321/machine-learning/blob/master/projects/logistic%20regression/images/distribution.jpg?raw=true)
 
+
+So, with class values equal to 1 or 2 and gender equal to 1 (which means female) there are more chances of survival while on the other hand class value equal to 3 and gender equal to 0 (which means male) there are least chances of survival.
+
+
