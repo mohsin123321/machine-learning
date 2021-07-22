@@ -1,10 +1,6 @@
-# Machine Learning Algorithms 
-## 1) Logistic Regression
-Logistic Regression implemented in Python from sratch. It uses gradient decent approach for the convergence of the model and uses the titanic data to calculate the probability of survivals.
-
-## 2) Naive Bayes Algorithm
-We used Naive Bayes classifier to predict the sentiments of the reviews, based on IMDB dataset , to predict them deemed negative or positive.
-## 2.1) Data Preprocessing & Feature Extraction
+# Naive Bayes Algorithm
+Naive Bayes classifier is used to predict the sentiments of the reviews, based on IMDB dataset, to predict them deemed negative or positive.
+## 1.1) Data Preprocessing & Feature Extraction
 Our dataset (attached in zip file __aclImdb.zip__) includes 50K reviews which are equally divided among positive and negative reviews from which 25K are for training, 12.5K are for testing and 12.5K are for validation. For making the computations and testing faster, we are considering small training data (approx. 6.2K for both positive and negative reviews) and later we will move to the original training data. Firstly, we build the vocabulary of words which counts 1K most common words which are used in the reviews both positive and negative.
 ```python   
 for f in os.listdir("aclImdb/smalltrain/pos"):
@@ -40,7 +36,7 @@ Y = np.array(labels)
 data = np.concatenate([X, Y[:, None]], 1)
 np.savetxt("train.txt.gz", data)
 ```    
-## 2.2) Training & Analysing the model
+## 1.2) Training & Analysing the model
 The model was trained on the prepared document which contains bag of words (both for positive and negative) and their corresponding labels. It is found out that the training 
 accuracy of the model is 80.56%.
 For the analysis of the model, We sorted the weight matrix and used its indices to extract the top 10 positive and negative words from the vocabulary. We found out that some of the most impactful words on the predictions for negative reviews are waste, worst, awful and for positive reviews are loved, perfectly, brilliant etc. 
@@ -82,7 +78,7 @@ for tuple in np_mis_clsfd[-10:]:
 	f.close()
 	print(text)
 ```
-## 2.3) Evaluating the model with different variants
+## 1.3) Evaluating the model with different variants
 The test accuracy of the model is 80.39%, hence the model is not overfitting as the training and test accuracies are quite close. For underfitting, the accuracy is quite decent so if, even the underfitting happens it is going to be very small.
 
 For collecting different results, we applied different techniques like stemming, removing stop words , increasing training and vocabulary size.For stemming we loaded ```stem``` function from ```Porter.py``` and directly applied it on the words before creating dictionary as well as while creating Bag of Words.
