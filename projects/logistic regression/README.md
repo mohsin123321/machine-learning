@@ -1,6 +1,6 @@
 
 # Logistic Regression
-It uses conventional gradient decent approach for the convergence of the model and uses the titanic dataset to calculate the probability of survivals.  
+It uses conventional gradient decent approach for the convergence of the model and exploits the titanic dataset to calculate the probability of survivals.  
 
 ## 1.1) Dataset 
 Our dataset includes 711 samples in training dataset while 177 samples in test dataset. Each row in the dataset has seven columns (first 6 columns are features and last column is the class label). First column represents class (1st, 2nd or 3rd), second column represents male or female (0 for male and 1 for female), third column is age , fourth column is siblings/spouses aboard, fifth column is parents/children aboard, fifth column is fare and last column is class label (1 for survived and 0 for died).
