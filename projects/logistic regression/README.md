@@ -11,7 +11,7 @@ After performing 1 lac iterations the model converges at __0.002__ learning rate
 ## 1.3) Analyzing the Model
 By analyzing the weight vector, we can say that higher the value of class (1st feature), we have less probability of survival.Similarly, regarding gender (2nd feature); females have more probability of survival as compare to males. 3rd learned feature shows that younger people have more chance of survival as compare to poor people. If there are a smaller number of siblings/spouses and parents/children abroad, we have more chances of survival. Lastly, people who paid high fares have more chances of survival as compare to people who paid less fares.
 
-Hence, We can deduce that  1st class younger women passengers having no relatives abroad and paid higher amount of money for the fare are most likely to survive. 3rd class older
+Hence, we can deduce that  1st class younger women passengers having no relatives abroad and paid higher amount of money for the fare are most likely to survive. 3rd class older
 men passengers with relatives abroad and paid lesser amount of money for the fare are most like to die.
 The most influencial features of this problem are Class and Gender, which can be seen below in graphical form:-
 
